@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page = "unsplash" %}
+
+{% block title %}Unsplash Finder{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<h1 class="cap">Pictures related to keywords from our corpus</h1>
+<p>refresh to see more</p>
+<img class="responsive" src="https://source.unsplash.com/400x400/?forest" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?tree" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?nature" width="400" height="400">
+<p>forest, tree, nature</p>
+<img class="responsive" src="https://source.unsplash.com/400x400/?nuclear" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?cleanenergy" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?renewable" width="400" height="400">
+<p>nuclear, clean energy,renewable</p>
+<img class="responsive" src="https://source.unsplash.com/400x400/?globalwarming" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?climatechange" width="400" height="400">
+<img class="responsive" src="https://source.unsplash.com/400x400/?overpopulation" width="400" height="400">
+<p>global warming, climate change,over population</p>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}
