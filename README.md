@@ -1,86 +1,35 @@
 # Reddit CMV: Climate Change
 
-Updated: 2022-01-18
 
-[https://shinichiokada.medium.com/](https://shinichiokada.medium.com/) ([Building a Website Starter with FastAPI](https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864)).
+<h2>Introduction</h2>
 
-## Overview
+<p>
+We created this website interface using FastAPI, Jinja2Templates and Bootstrap. The website includes a sidebar and a top navigation bar. In the sidebar, you can find information on the data source and our annotation methods. There is also a data visualization page on delta distribution study in the sidebar. The top navigation bar contains three main functions that lets you get access to information from our annotated corpus.
+</p>
 
-A static simple website ready to deploy.
-This repo includes all the file and it is ready to deploy to Heroku.
-[How to Deploy a FastAPI App on Heroku for Free](https://towardsdatascience.com/how-to-deploy-your-fastapi-app-on-heroku-for-free-8d4271a4ab9)
+<h4>Search</h4>
+<p>In the search page, you can input a keyword in a search box and click search, the interface will return the comments containing this keyword. It will also allow the user to select from a list of aspects (politics, humanity, science, economy), as well as a list of opinions (concerned, not concerned, neutral, conflicted, none). The interface can display the corresponding sentences given the specified aspect and opinion. The “none” selection in the opinions, allows you to search for all the comments from your selected aspect, despite the opinion of the comment. </p>
 
-- .env
-- .gitignore
-- app
-- Procfile
-- README.md
-- requirements.txt
-- runtime.txt
-- static
-- templates
+<h4>Visualization</h4>
+<p>In the visualization page, similarly you can choose from the list of aspects and opinions. After selecting, the interface shows a pie graph for the distribution of delta comments among the corresponding sentences. There will also be two bar graphs, one for the number of sentences for each aspect and another one for the number of sentences for each opinion. In addition, there are two wordcloud graphs for the keyword in each aspect and opinion you selected.</p>
 
-## Requirement
+<h4>Pictures</h4>
+<p>In an additional “pictures” page, you can see the pictures related to the keywords from our collected corpus. It allows you to refresh and see random new pictures from that keyword. This page provides direct information for the user to experience the beauty of our current living planet and the effect of human activities on global warming. </p>
 
-See requirements.txt for updates.
+## Python environment
+
+3.9.6
+
+## Requirements
 
 ```sh
-requests==2.27.1
-fastapi==0.72.0
-uvicorn==0.17.0
-python-dotenv==0.19.2
-aiofiles==0.8.0
+requests==2.26.0
+fastapi==0.70.0
+uvicorn==0.15.0
+python-dotenv==0.19.1
+aiofiles==0.7.0
 python-multipart==0.0.5
-jinja2==3.0.3
-Markdown==3.3.6
+jinja2==3.0.2
+Markdown==3.3.4
 pytest==6.2.5
 ```
-
-## Installation & Usage
-
-```bash
-$ git clone git@github.com:shinokada/fastapi-web-starter.git
-$ cd fastapi-web-starter
-# install packages
-$ pip install -r requirements.txt
-# start the server
-$ uvicorn app.main:app --reload --port 8080
-```
-
-Visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
-
-![Starting](./images/image-1.png)
-
-## Features
-
-- Menu
-- Unsplash
-- Accordion
-- Markdown pages
-
-## Test
-
-All tests are under `tests` directory.
-
-```bash
-# Change the directory
-$ cd fastapi-web-starter
-# Run tests
-$ pytest -v
-```
-
-## Author
-
-[twitter](https://twitter.com/shinokada)
-
-## Licence
-
-【MIT License】
-
-Copyright 2021 Shinichi Okada
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
